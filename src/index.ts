@@ -3,7 +3,7 @@
 import { Order } from './class/order';
 import { Product } from './class/product';
 import { Message } from './services/message';
-import { SaveOrder } from './services/persistence';
+import { Persistence } from './services/persistence';
 import { ShoppingCart } from './class/shoppingCart';
 import {
   FiftyPercentDiscount,
@@ -32,7 +32,7 @@ const enterpriseCustomer = new EnterpriseCustomer(
 const order = new Order(
   shoppingCart,
   new Message(),
-  new SaveOrder(),
+  new Persistence(),
   enterpriseCustomer,
 );
 
