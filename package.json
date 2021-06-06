@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build:backend": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:silent": "jest --watchAll --silent --noStackTrace"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
