@@ -10,7 +10,7 @@ export class Order {
   constructor(
     private readonly shoppingCart: ShoppingCartProtocol,
     private readonly message: MessageProtocol,
-    private readonly save: PersistenceProtocol,
+    private readonly persistence: PersistenceProtocol,
     private readonly customer: CustomerOrder,
   ) {}
 
@@ -28,7 +28,7 @@ export class Order {
     this.message.sendMessage(
       `Your request has been received, total ${this.shoppingCart.total()}`,
     );
-    this.save.saveOrder();
+    this.persistence.saveOrder();
     this.shoppingCart.clearCart();
 
     console.log(`
