@@ -1,5 +1,4 @@
 import { EnterpriseCustomer, IndividualCostumer } from './customer';
-import { IndividualCustomerProtocol } from './interfaces/customerProtocol';
 
 const createIndividualCustomer = (
   name: string,
